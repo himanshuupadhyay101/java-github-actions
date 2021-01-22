@@ -1,9 +1,15 @@
 name: Build
-on: [push]
+on:
+  push:
+    branches: 
+      - master
+  pull_request:
+    branches: 
+      - master
 
 jobs:
   build:
-    name: "David's Build"
+    name: "Build"
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
